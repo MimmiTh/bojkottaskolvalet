@@ -24,7 +24,7 @@ module.exports = function (grunt) {
     watch: {
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-        tasks: ['coffee']
+        tasks: ['coffee', ]
       },
       less: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
@@ -63,6 +63,7 @@ module.exports = function (grunt) {
       },
       test: {
         options: {
+          hostname: 'localhost',
           port: 9001,
           base: [
             '.tmp',
@@ -106,7 +107,7 @@ module.exports = function (grunt) {
       all: {
         options: {
           run: true,
-          urls: ['http://localhost:<%= connect.options.port %>/index.html']
+          urls: ['http://localhost:<%= connect.test.options.port %>/index.html']
         }
       }
     },
@@ -116,7 +117,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= yeoman.app %>/scripts',
           src: '{,*/}*.coffee',
-          dest: '<%= yeoman.app %>/scripts',
+          dest: '<%= yeoman.dist %>/scripts',
           ext: '.js'
         }]
       }
@@ -124,12 +125,12 @@ module.exports = function (grunt) {
     less: {
       dist: {
         files: {
-          '<%= yeoman.app %>/styles/main.css': ['<%= yeoman.app %>/styles/main.less']
+          '.tmp/styles/main.css': ['<%= yeoman.app %>/styles/main.less']
         },
         options: {
           sourceMap: true,
-          sourceMapFilename: '<%= yeoman.app %>/styles/main.css.map',
-          sourceMapBasepath: '<%= yeoman.app %>/',
+          sourceMapFilename: '.tmp/styles/main.css.map',
+          sourceMapBasepath: '.tmp/',
           sourceMapRootpath: '/'
         }
       }
