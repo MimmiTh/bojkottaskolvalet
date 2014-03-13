@@ -4,6 +4,14 @@
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "../fonts/font-awesome";
 
+@import "../styles/signika.less";
+
+@blue: #00b5c9;
+@red: #ff2323;
+@grey: #f8f8f8;
+@black: #1a1a1a;
+@white: #fff;
+
 .browsehappy {
   margin: 0.2em 0; 
   background: #ccc; 
@@ -13,4 +21,76 @@
 
 .jumbotron {
   margin: 50px auto 0 auto;
+}
+
+body { 
+    padding-top: 50px;
+    font-family: Signika; 
+    font-weight: 300;
+    font-size: 18px;
+    color: @white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-family: Signika;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.light {
+    font-weight: 300;
+}
+
+section > .container{
+	padding: 5% 30px;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 700px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 700px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 700px;
+	}
+}
+
+.navbar-fixed-top {
+	font-size: 16px;
+}
+
+#home, #about {
+    background: @blue;
+}
+
+#home h1 {
+    text-align: center;
+    line-height: 1em;
+}
+
+#logo {
+    margin: 0 auto;
+    display: block;
+}
+
+#why, #facts {
+    background: @grey;
+    color: #333;
+}
+
+#contribute {
+    background: @black;
+}
+
+#instagram {
+    background: @red;
 }
