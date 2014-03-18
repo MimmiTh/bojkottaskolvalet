@@ -85,25 +85,23 @@ section > .container{
 	display: block;
 	position: relative;
 	bottom: -50px;
-	left: -5px;
-	width: 105%;
 	height: 100px;
 }
 
 #home:after, #contribute:after, #facts:after {
-	-ms-transform: rotate(3deg); /* IE 9 */
-	-webkit-transform: rotate(3deg); /* Safari and Chrome */
-	-o-transform: rotate(3deg); /* Opera */
-	-moz-transform: rotate(3deg); /* Firefox */
-	transform: rotate(3deg);
+	-ms-transform: skew(0deg, 3deg); /* IE 9 */
+	-webkit-transform: skew(0deg, 3deg); /* Safari and Chrome */
+	-o-transform: skew(0deg, 3deg); /* Opera */
+	-moz-transform: skew(0deg, 3deg); /* Firefox */
+	transform: skew(0deg, 3deg);
 }
 
 #why:after, #instagram:after {
-	-ms-transform: rotate(-3deg); /* IE 9 */
-	-webkit-transform: rotate(-3deg); /* Safari and Chrome */
-	-o-transform: rotate(-3deg); /* Opera */
-	-moz-transform: rotate(-3deg); /* Firefox */
-	transform: rotate(-3deg);
+	-ms-transform: skew(0deg, -3deg); /* IE 9 */
+	-webkit-transform: skew(0deg, -3deg); /* Safari and Chrome */
+	-o-transform: skew(0deg, -3deg); /* Opera */
+	-moz-transform: skew(0deg, -3deg); /* Firefox */
+	transform: skew(0deg, -3deg);
 }
 
 #logo {
@@ -114,6 +112,10 @@ section > .container{
 #why, #why:after, #facts, #facts:after {
     background: @grey;
     color: #333;
+}
+
+#why li {
+	margin-bottom: 15px;
 }
 
 #contribute, #contribute:after {
