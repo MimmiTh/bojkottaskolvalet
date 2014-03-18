@@ -16,6 +16,14 @@
     <!-- endbuild -->
   </head>
   <body data-spy="scroll" data-target=".navbar">
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/sv_SE/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,14 +50,15 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <section id="home">
+    <section id="home" class="tilted">
         <div class="container">
             <img id="logo" src="images/logo.svg" alt="Logotyp" style="width: 20%; height: auto;">
             <h1 id="logo-title">Bojkotta</br> <span class="light">Skolvalet</span></h1>
+            <a id="down-arrow" class="animated bounce" href="#why"><i class="fa fa-chevron-circle-down"></i></a>
         </div>
     </section>
 
-    <section id="why">
+    <section id="why" class="tilted">
         <div class="container">
             <h1>Varför bojkotta skolvalet?</h1>
             <p>Skolvalet är på låtsas. Din röst räknas inte på riktigt och du får inte mer inflytande över samhället eller ditt eget liv. De försöker lura oss!</p>
@@ -58,25 +67,31 @@
         </div>
     </section>
 
-    <section id="contribute">
+    <section id="contribute" class="tilted">
         <div class="container">
             <h1>Hjälp till!</h1>
             <p>Hjälp oss sprida kampanjen så att fler bojkottar skolvalet!</p>
             <ul>
-            <li>Beställ hem ett kampanjkitt med magneter, affisher och pins att sätta upp på din skola. Maila <a href="mailto:bojkottaskolvalet@rbuf.se">bojkottaskolvalet@rbuf.se</a> för att beställa kittet!</li>
-            <li>Ta en selfie där du pekar fuck you, lägg upp på Instagram och tagga #bojkottaskolvalet.</li>
-            <li>Sprid ordet och dela!</li>  
+              <li>Beställ hem ett kampanjkitt med magneter, affisher och pins att sätta upp på din skola. Maila <a href="mailto:bojkottaskolvalet@rbuf.se">bojkottaskolvalet@rbuf.se</a> för att beställa kittet!</li>
+              <li>Ta en selfie där du pekar fuck you, lägg upp på Instagram och tagga #bojkottaskolvalet.</li>
+              <li>Sprid ordet och dela!</li>
+            </ul>
+            <div id="share">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="bojkottaskolvalet" data-lang="en" data-related="bojkottaskolvalet:Bojkotta Skolvalets Twitter-konto">Twittra</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <div class="fb-share-button" data-href="https://bojkottaskolvalet.se" data-type="button_count"></div>
+          </div>
         </div>
     </section>
 
-    <section id="instagram">
+    <section id="instagram" class="tilted">
         <div class="container">
             <h1>#bojkottaskolvalet</h1>
-            <iframe src="http://snapwidget.com/in/?h=ZnVja3lvdXxpbnwxNjB8NHw1fHxub3wyMHxub25lfG9uU3RhcnR8bm8=&v=13314" title="Instagram Widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:720px; height:900px"></iframe>
+            <div id="instafeed"></div>
         </div>
     </section>
 
-    <section id="facts">
+    <section id="facts" class="tilted">
         <div class="container">
             <h1>Inte riktigt övertygad?</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta ante ac ligula fermentum sodales. Praesent viverra scelerisque luctus. Duis elementum suscipit placerat. Quisque luctus neque nec nibh egestas, at ornare nulla malesuada. Cras eget tellus molestie nibh mollis luctus. Sed fermentum turpis eget ante gravida tempus. Praesent tristique risus ut viverra tempus. In cursus viverra sagittis. Proin sem ante, venenatis quis dui nec, iaculis commodo arcu. Aenean placerat rutrum aliquam.</p>
@@ -87,7 +102,7 @@
     <section id="about">
         <div class="container">
             <h1>Vilka är vi?</h1>
-            <p>Rädda Barnens Ungdomsförbund är en organisation för alla mellan 7 och 25. Vi kämpar för att barn och ungas åsikter ska tas på allvar i alla lägen. Kom med!</p>
+            <p>Rädda Barnens Ungdomsförbund är en organisation för alla mellan 7 och 25 år. Vi kämpar för att barn och ungas åsikter ska tas på allvar i alla lägen. Kom med!</p>
             <a href="http://rbuf.se/">
               <img src="images/rbuf-logo.png" id="rbuf-logo" alt="Rädda Barnens Ungdomsförbund">
             </a>
@@ -130,5 +145,15 @@
         <!-- endbuild -->
         <script src="bower_components/fittext/fittext.js"></script>
         <script>window.fitText( document.querySelectorAll("h1") ); </script>
+        <script src="bower_components/instafeed.js/instafeed.js"></script>
+        <script type="text/javascript">
+            var feed = new Instafeed({
+                get: 'tagged',
+                tagName: 'fuckyou',
+                clientId: '600e8ee9fb3047cd80f2dee01fcf7ae4',
+                limit: 16,
+            });
+            feed.run();
+        </script>
 </body>
 </html>
