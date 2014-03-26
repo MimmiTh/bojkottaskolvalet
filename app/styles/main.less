@@ -45,7 +45,8 @@ h1, h2, h3, h4, h5, h6 {
 a {
 	color: #00b5c9;
 	&:hover {
-		color: #FFF;	
+		color: #FFF;
+		text-decoration: none;	
 	}
 }
 
@@ -156,6 +157,29 @@ section > .container{
 #facts p {
 	margin-bottom: 30px;
 	line-height: 1.7em;
+}
+
+#facts blockquote {
+	margin: 30px 0 30px 50px;
+	position: relative;
+	border-left: 5px solid #DFDFDF;
+	footer {
+		color: #929292;
+		margin-top: 10px;
+		a {
+			color: #929292;
+			border-bottom: 1px dotted #929292;
+		}
+	}
+}
+
+#facts blockquote:before {
+	content: "\201C";
+	position: absolute;
+	left: -60px;
+	font-size: 120px;
+	top: -25px;
+	color: #DFDFDF;
 }
 
 #about {
