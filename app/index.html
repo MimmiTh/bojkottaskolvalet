@@ -52,8 +52,8 @@
 
     <section id="home" class="tilted">
         <div class="container">
-            <img id="logo" src="images/logo.svg" alt="Logotyp" style="width: 20%; height: auto;">
-            <h1 id="logo-title">Bojkotta</br> <span class="light">Skolvalet</span></h1>
+            <img id="logo" src="../images/logo.svg" alt="Logotyp">
+            <h1 id="logo-title">Bojkotta<br><span class="light">Skolvalet</span></h1>
             <a id="down-arrow" class="animated bounce" href="#why"><i class="fa fa-chevron-circle-down"></i></a>
         </div>
     </section>
@@ -136,6 +136,8 @@
 
         <!-- build:js scripts/main.js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/instafeed.js/instafeed.js"></script>
+        <script src="bower_components/fittext/fittext.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
@@ -153,9 +155,9 @@
         <script src="bower_components/bootstrap/js/collapse.js"></script>
         <script src="bower_components/bootstrap/js/tab.js"></script>
         <!-- endbuild -->
-        <script src="bower_components/fittext/fittext.js"></script>
+        
         <script>window.fitText( document.querySelectorAll("h1") ); </script>
-        <script src="bower_components/instafeed.js/instafeed.js"></script>
+        
         <script type="text/javascript">
             var feed = new Instafeed({
                 get: 'tagged',
